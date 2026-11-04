@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="32dp"
+    app:layout_constraintWidth_max="360dp"
+    android:background="@drawable/bg_popup_kondisi"
+    android:clipToOutline="true"
+    android:elevation="12dp"
+    android:padding="24dp">
+
+    <!-- Tombol Close -->
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#222222" />
+
+    <!-- Lingkaran Status (Badge) -->
+    <TextView
+        android:id="@+id/badgeStatus"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:background="@drawable/bg_circle_segar"
+        android:fontFamily="@font/oswald_semibold"
+        android:gravity="center"
+        android:letterSpacing="0.06"
+        android:rotation="-9"
+        android:text="SEGAR"
+        android:textColor="#2E5A44"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nama Buah -->
+    <TextView
+        android:id="@+id/tvNamaBuah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/oswald_bold"
+        android:letterSpacing="0.06"
+        android:text="TOMAT"
+        android:textAllCaps="true"
+        android:textColor="#222222"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnClose"
+        app:layout_constraintStart_toEndOf="@+id/badgeStatus"
+        app:layout_constraintTop_toTopOf="@+id/badgeStatus" />
+
+    <!-- Tingkat Keyakinan -->
+    <TextView
+        android:id="@+id/tvConfidence"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/space_mono"
+        android:letterSpacing="0.03"
+        android:lineSpacingMultiplier="1.575"
+        android:layout_marginRight="-10dp"
+        android:text="Tingkat keyakinan: 86%"
+        android:textColor="#222222"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNamaBuah"
+        app:layout_constraintStart_toStartOf="@+id/tvNamaBuah"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaBuah" />
+
+    <!-- Deskripsi -->
+    <TextView
+        android:id="@+id/tvDeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.03"
+        android:lineSpacingMultiplier="1.575"
+        android:text="Warna kulit merata merah cerah, tidak ditemukan bercak lunak atau keriput. Kondisi buah masuk kategori segar dan layak konsumsi."
+        android:textColor="#222222"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badgeStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
