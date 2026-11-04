@@ -1,0 +1,1 @@
+SEGARIN application screenshots and documentation
